@@ -46,7 +46,8 @@ class SiteController extends \yii\web\Controller
         if (!Yii::$app->request->isAjax) { // if it is a normal request coming from admin panel - show a page
             return $this->render('error', [
                 'name' => $name,
-                'code' => $code
+                'code' => $code,
+                'msg' => $msg
             ]);
         } else {
             $this->error($code, $name); // if it was API request - return error in the appropriate style

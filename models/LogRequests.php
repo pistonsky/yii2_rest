@@ -12,13 +12,10 @@ use Yii;
  * @property integer $timestamp
  */
 
-class LogRequests extends \yii\redis\ActiveRecord
+class LogRequests extends \yii\db\ActiveRecord
 {
-    /**
-     * @return array the list of attributes for this record
-     */
-    public function attributes()
+	public static function tableName()
     {
-        return ['id','timestamp'];
+        return 'log_requests';
     }
 }

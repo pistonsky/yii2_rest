@@ -10,20 +10,19 @@ use app\filters\VkAuth;
 class Controller extends \yii\rest\Controller
 {
 	protected $uid;
-	private $auth_key;
 
 	public function behaviors()
 	{
 		return [
-			'authenticator' => [
-				'class' => VkAuth::className(),
-			],
+			// 'authenticator' => [
+			// 	'class' => VkAuth::className(),
+			// ],
 			'corsFilter' => [
 				'class' => \yii\filters\Cors::className(),
 			],
-			'rateLimiter' => [
-				'class' => \yii\filters\RateLimiter::className(),
-			],
+			// 'rateLimiter' => [
+			// 	'class' => \yii\filters\RateLimiter::className(),
+			// ],
 		];
 	}
 
@@ -76,27 +75,16 @@ class Controller extends \yii\rest\Controller
 			$log->save();
 
 		// checking all mandatory parameters for all requests
-			if (!isset($_POST['uid']) || (($this->uid = $_POST['uid']) == ''))
-			{
-				echo json_encode([
-					'error' => [
-						'code' => InsufficientInputParameters,
-						'msg' => 'uid is not set'
-					]
-				]);
-				return false;
-			}
-
-			if (!isset($_POST['auth_key']) || (($this->auth_key = $_POST['auth_key']) == ''))
-			{
-				echo json_encode([
-					'error' => [
-						'code' => InsufficientInputParameters,
-						'msg' => 'auth_key is not set'
-					]
-				]);
-				return false;
-			}
+			// if (!isset($_POST['uid']) || (($this->uid = $_POST['uid']) == ''))
+			// {
+			// 	echo json_encode([
+			// 		'error' => [
+			// 			'code' => InsufficientInputParameters,
+			// 			'msg' => 'uid is not set'
+			// 		]
+			// 	]);
+			// 	return false;
+			// }
 
 		return true;
 	}

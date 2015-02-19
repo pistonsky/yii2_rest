@@ -14,14 +14,8 @@ $config = [
 			'enableStrictParsing' => true,
 			'showScriptName' => false,
 			'rules' => [
-				'admin' 								=> 'admin',
-				'admin/<action:\w+>s/<id:\w+>' 			=> 'admin/<action>',
-				'admin/<action:\w+>s/new'				=>'admin/new<action>',
-				'admin/<action:\w+>s/<id:\w+>/delete' 	=> 'admin/<action>delete',
-
-				'admin/user/<id:\d+>' 					=> 'admin/user',
-
-				'<controller:\w+>/<action:\w+>' 		=> '<controller>/<action>'
+				'register' => 'register',
+				['class' => 'yii\rest\UrlRule', 'controller' => 'message']
 			],
 		],
 		'request' => [
