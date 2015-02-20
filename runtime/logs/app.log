@@ -1,0 +1,973 @@
+2015-02-19 08:36:43 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "register/index".' in /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('register/index', Array)
+#1 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Applications/MAMP/htdocs/hello_world/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "register/index".' in /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/web/Application.php:95
+Stack trace:
+#0 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Applications/MAMP/htdocs/hello_world/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2015-02-19 08:36:43 [::1][][-][info][application] $_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '9f4b0a9b-1c6d-07c1-22c0-70a2bb2b4d76'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '60881'
+    'REDIRECT_URL' => '/hello_world/web/register'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/register'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424331403.87
+    'REQUEST_TIME' => 1424331403
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 08:37:46 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'public' (T_PUBLIC)' in /Applications/MAMP/htdocs/hello_world/models/Users.php:73
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-02-19 08:37:46 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'f65ea811-2115-2343-81e4-31ab3d361ede'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '60893'
+    'REDIRECT_URL' => '/hello_world/web/register'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/register'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424331466.61
+    'REQUEST_TIME' => 1424331466
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 08:38:26 [::1][][-][warning][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2015-02-19 08:38:26 [::1][][-][info][application] $_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'a404d2c1-820d-a991-a615-49acdd992202'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '60914'
+    'REDIRECT_URL' => '/hello_world/web/messages'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/messages'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424331506.11
+    'REQUEST_TIME' => 1424331506
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 08:38:49 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'public' (T_PUBLIC)' in /Applications/MAMP/htdocs/hello_world/models/Users.php:73
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-02-19 08:38:49 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'e3c5d885-a5cf-1483-cfe8-cb548f4a05bc'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '60915'
+    'REDIRECT_URL' => '/hello_world/web/register'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/register'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424331529.83
+    'REQUEST_TIME' => 1424331529
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 08:39:48 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class app\models\Users contains 3 abstract methods and must therefore be declared abstract or implement the remaining methods (yii\web\IdentityInterface::getId, yii\web\IdentityInterface::getAuthKey, yii\web\IdentityInterface::validateAuthKey)' in /Applications/MAMP/htdocs/hello_world/models/Users.php:107
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-02-19 08:39:48 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'b9ce4417-bf00-24bb-1ee6-34ef2132fe0c'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '60919'
+    'REDIRECT_URL' => '/hello_world/web/register'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/register'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424331588.29
+    'REQUEST_TIME' => 1424331588
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 08:42:23 [::1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Declaration of app\models\Users::validateAuthKey() must be compatible with yii\web\IdentityInterface::validateAuthKey($authKey)' in /Applications/MAMP/htdocs/hello_world/models/Users.php:17
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-02-19 08:42:23 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '916256f4-3cd7-064e-1a41-0faa3e45a3f5'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '60928'
+    'REDIRECT_URL' => '/hello_world/web/register'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/register'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424331743.69
+    'REQUEST_TIME' => 1424331743
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 09:05:31 [::1][][-][warning][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2015-02-19 09:05:31 [::1][][-][info][application] $_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '93a8a105-b6c5-92f2-8244-b9a506bc7fdb'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '61211'
+    'REDIRECT_URL' => '/hello_world/web/messages'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/messages'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424333131.73
+    'REQUEST_TIME' => 1424333131
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 09:05:39 [::1][][-][warning][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2015-02-19 09:05:39 [::1][][-][info][application] $_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '2c847828-9d6f-20c0-bdd0-7862ba542936'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '61218'
+    'REDIRECT_URL' => '/hello_world/web/messages'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/messages'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424333139.01
+    'REQUEST_TIME' => 1424333139
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 09:05:43 [::1][][-][warning][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2015-02-19 09:05:43 [::1][][-][info][application] $_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '85f2f13f-07eb-eb59-786b-40b9869f6420'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '61218'
+    'REDIRECT_URL' => '/hello_world/web/messages'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/messages'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424333143.46
+    'REQUEST_TIME' => 1424333143
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 09:06:12 [::1][][-][warning][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2015-02-19 09:06:12 [::1][][-][info][application] $_POST = [
+    'text' => 'This was created using POST messages'
+]
+
+$_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '171'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarysUoAqJ7JRB03B9PJ'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '2c70bd15-093f-6717-986d-6932096b6aeb'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '61221'
+    'REDIRECT_URL' => '/hello_world/web/messages'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/messages'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424333172.24
+    'REQUEST_TIME' => 1424333172
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 09:06:17 [::1][][-][warning][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2015-02-19 09:06:17 [::1][][-][info][application] $_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '36f46ff6-6ed2-2909-365b-486481ec6f52'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '61221'
+    'REDIRECT_URL' => '/hello_world/web/messages'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/messages'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424333177.12
+    'REQUEST_TIME' => 1424333177
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 09:06:44 [::1][][-][warning][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2015-02-19 09:06:43 [::1][][-][info][application] $_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'd8ecec18-3dfd-11aa-241a-a408b55ecf84'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '61223'
+    'REDIRECT_URL' => '/hello_world/web/messages'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'OPTIONS'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/messages'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424333203.95
+    'REQUEST_TIME' => 1424333203
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 09:07:29 [::1][][-][warning][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2015-02-19 09:07:29 [::1][][-][info][application] $_POST = [
+    'text' => 'Bla Bla Bla'
+]
+
+$_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '16'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'acbdecdb-d79f-617b-c02c-b5b9e05cc186'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '61225'
+    'REDIRECT_URL' => '/hello_world/web/messages'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/messages'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424333249.14
+    'REQUEST_TIME' => 1424333249
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 09:07:34 [::1][][-][warning][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+2015-02-19 09:07:34 [::1][][-][info][application] $_COOKIE = [
+    '_csrf' => '69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs:32:\"SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '59111b94-6a19-7454-1148-3cf11a4ff8b6'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'HTTP_COOKIE' => '_csrf=69551420a65777633d1610d3265ee308fadc1385da3d08ed2b3861227e62b2dcs%3A32%3A%22SH-3QlVuisWu_nZFCbArJcGJpjVqxGEw%22%3B'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '61225'
+    'REDIRECT_URL' => '/hello_world/web/messages'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/messages'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1424333254.2
+    'REQUEST_TIME' => 1424333254
+    'argv' => []
+    'argc' => 0
+]
+2015-02-19 10:23:17 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('mysql:host=loca...', 'hello_world', 'MEwQQMrRZLANavp...', NULL)
+#1 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(208): yii\db\Connection->getSlavePdo()
+#5 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(813): yii\db\Command->prepare(true)
+#6 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Schema.php(139): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/MigrateController.php(125): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(604): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(99): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#16 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#17 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#18 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#19 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#20 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Applications/MAMP/htdocs/hello_world/yii(23): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(208): yii\db\Connection->getSlavePdo()
+#3 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(813): yii\db\Command->prepare(true)
+#4 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Schema.php(139): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/MigrateController.php(125): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(604): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(99): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#15 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#16 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#17 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#18 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Applications/MAMP/htdocs/hello_world/yii(23): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2015-02-19 10:23:17 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'TMPDIR' => '/var/folders/k_/mmxs3n114cx99441wwck8wy00000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/tmp/launch-pDzRtO/Render'
+    'TERM_PROGRAM_VERSION' => '326'
+    'TERM_SESSION_ID' => '9EB92C80-43A0-4603-B45F-4E37E1C61AAF'
+    'USER' => 'pistonsky'
+    'SSH_AUTH_SOCK' => '/tmp/launch-ifPXNf/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0:0'
+    '__CHECKFIX1436934' => '1'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+    'PWD' => '/Applications/MAMP/htdocs/hello_world'
+    'LANG' => 'en_US.UTF-8'
+    'HOME' => '/Users/pistonsky'
+    'SHLVL' => '1'
+    'LOGNAME' => 'pistonsky'
+    '_' => './yii'
+    'OLDPWD' => '/Applications/MAMP/htdocs'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1424341397.3573
+    'REQUEST_TIME' => 1424341397
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-02-19 10:30:24 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('mysql:host=127....', 'hello_world', 'MEwQQMrRZLANavp...', NULL)
+#1 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(208): yii\db\Connection->getSlavePdo()
+#5 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(813): yii\db\Command->prepare(true)
+#6 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Schema.php(139): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/MigrateController.php(125): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(604): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(99): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#16 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#17 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#18 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#19 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#20 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Applications/MAMP/htdocs/hello_world/yii(23): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(208): yii\db\Connection->getSlavePdo()
+#3 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(813): yii\db\Command->prepare(true)
+#4 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Schema.php(139): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/MigrateController.php(125): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(604): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(99): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#15 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#16 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#17 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#18 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Applications/MAMP/htdocs/hello_world/yii(23): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2015-02-19 10:30:24 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'TMPDIR' => '/var/folders/k_/mmxs3n114cx99441wwck8wy00000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/tmp/launch-pDzRtO/Render'
+    'TERM_PROGRAM_VERSION' => '326'
+    'TERM_SESSION_ID' => '9EB92C80-43A0-4603-B45F-4E37E1C61AAF'
+    'USER' => 'pistonsky'
+    'SSH_AUTH_SOCK' => '/tmp/launch-ifPXNf/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0:0'
+    '__CHECKFIX1436934' => '1'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+    'PWD' => '/Applications/MAMP/htdocs/hello_world'
+    'LANG' => 'en_US.UTF-8'
+    'HOME' => '/Users/pistonsky'
+    'SHLVL' => '1'
+    'LOGNAME' => 'pistonsky'
+    '_' => './yii'
+    'OLDPWD' => '/Applications/MAMP/htdocs'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1424341824.7241
+    'REQUEST_TIME' => 1424341824
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-02-19 10:35:52 [-][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDO::__construct(): MySQL server has gone away' in /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDO::__construc...', '/Applications/M...', 579, Array)
+#1 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('mysql:host=127....', 'hello_world', 'MEwQQMrRZLANavp...', NULL)
+#2 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#3 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#4 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#5 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(208): yii\db\Connection->getSlavePdo()
+#6 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(813): yii\db\Command->prepare(true)
+#7 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#8 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#9 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#10 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Schema.php(139): yii\db\mysql\Schema->loadTableSchema('migration')
+#11 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/MigrateController.php(125): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(604): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(99): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#16 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#18 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#19 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#20 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#21 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Applications/MAMP/htdocs/hello_world/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'PDOException' with message 'SQLSTATE[HY000] [2006] MySQL server has gone away' in /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(0): PDO->__construct()
+#1 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(208): yii\db\Connection->getSlavePdo()
+#5 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(813): yii\db\Command->prepare(true)
+#6 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Schema.php(139): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/MigrateController.php(125): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(604): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(99): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#16 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#17 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#18 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#19 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#20 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Applications/MAMP/htdocs/hello_world/yii(23): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2006] MySQL server has gone away' in /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(208): yii\db\Connection->getSlavePdo()
+#3 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(813): yii\db\Command->prepare(true)
+#4 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Schema.php(139): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/MigrateController.php(125): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(604): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(99): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#15 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#16 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#17 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#18 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Applications/MAMP/htdocs/hello_world/yii(23): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2015-02-19 10:30:52 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'TMPDIR' => '/var/folders/k_/mmxs3n114cx99441wwck8wy00000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/tmp/launch-pDzRtO/Render'
+    'TERM_PROGRAM_VERSION' => '326'
+    'TERM_SESSION_ID' => '9EB92C80-43A0-4603-B45F-4E37E1C61AAF'
+    'USER' => 'pistonsky'
+    'SSH_AUTH_SOCK' => '/tmp/launch-ifPXNf/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0:0'
+    '__CHECKFIX1436934' => '1'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+    'PWD' => '/Applications/MAMP/htdocs/hello_world'
+    'LANG' => 'en_US.UTF-8'
+    'HOME' => '/Users/pistonsky'
+    'SHLVL' => '1'
+    'LOGNAME' => 'pistonsky'
+    '_' => './yii'
+    'OLDPWD' => '/Applications/MAMP/htdocs'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1424341852.0213
+    'REQUEST_TIME' => 1424341852
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-02-19 12:08:35 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host '127.0.0.1:8888' (22)' in /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('mysql:host=127....', 'hello_world', 'MEwQQMrRZLANavp...', NULL)
+#1 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(208): yii\db\Connection->getSlavePdo()
+#5 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(813): yii\db\Command->prepare(true)
+#6 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Schema.php(139): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/MigrateController.php(125): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(604): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(99): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#16 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#17 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#18 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#19 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#20 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Applications/MAMP/htdocs/hello_world/yii(23): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2005] Unknown MySQL server host '127.0.0.1:8888' (22)' in /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(208): yii\db\Connection->getSlavePdo()
+#3 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(813): yii\db\Command->prepare(true)
+#4 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/db/Schema.php(139): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/MigrateController.php(125): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(604): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(99): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#14 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#15 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#16 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(161): yii\base\Module->runAction('migrate', Array)
+#17 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/console/Application.php(137): yii\console\Application->runAction('migrate', Array)
+#18 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Applications/MAMP/htdocs/hello_world/yii(23): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2015-02-19 12:08:34 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'TMPDIR' => '/var/folders/k_/mmxs3n114cx99441wwck8wy00000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/tmp/launch-pDzRtO/Render'
+    'TERM_PROGRAM_VERSION' => '326'
+    'TERM_SESSION_ID' => '9EB92C80-43A0-4603-B45F-4E37E1C61AAF'
+    'USER' => 'pistonsky'
+    'SSH_AUTH_SOCK' => '/tmp/launch-ifPXNf/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0:0'
+    '__CHECKFIX1436934' => '1'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+    'PWD' => '/Applications/MAMP/htdocs/hello_world'
+    'LANG' => 'en_US.UTF-8'
+    'HOME' => '/Users/pistonsky'
+    'SHLVL' => '1'
+    'LOGNAME' => 'pistonsky'
+    '_' => '/Applications/MAMP/bin/php/php5.6.2/bin/php'
+    'OLDPWD' => '/Applications/MAMP/htdocs'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1424344114.87
+    'REQUEST_TIME' => 1424344114
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
