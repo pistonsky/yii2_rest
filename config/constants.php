@@ -12,3 +12,4 @@ define('InsufficientInputParameters', 201);
 define('UserNotFound',400);
 define('TooManyRequests',427);
 define('SaveFailed',430);
+define('UnderDevelopment',666);

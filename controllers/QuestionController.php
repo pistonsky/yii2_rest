@@ -52,4 +52,9 @@ class QuestionController extends Controller
     		]
     	]);
     }
+
+    public function actionDelete()
+    {
+        $this->error(UnderDevelopment,'this method is not yet developed');
+    }
 }

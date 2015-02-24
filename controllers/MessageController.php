@@ -58,4 +58,9 @@ class MessageController extends Controller
             $this->error(SaveFailed, "message save failure");
         }
     }
+
+    public function actionDelete()
+    {
+        $this->error(UnderDevelopment,'this method is not yet developed');
+    }
 }
