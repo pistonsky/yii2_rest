@@ -43,7 +43,7 @@ class SiteController extends \yii\web\Controller
 
         $name = $exception->getName();
 
-        if (!Yii::$app->request->isAjax) { // if it is a normal request coming from admin panel - show a page
+        if (!Yii::$app->request->isAjax && false) { // if it is a normal request coming from admin panel - show a page
             return $this->render('error', [
                 'name' => $name,
                 'code' => $code,

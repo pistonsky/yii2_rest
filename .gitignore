@@ -4,3 +4,9 @@ protected/runtime/*
 !protected/runtime/.gitignore
 protected/data/*.db
 themes/classic/views/
+
+*.data
+
+*.data
+
+runtime/debug/54e70531582fb.data

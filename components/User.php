@@ -3,6 +3,7 @@
 namespace app\components;
 
 use app\models\Admins;
+use app\models\Users;
 
 class User extends \yii\web\User
 {
@@ -24,5 +25,16 @@ class User extends \yii\web\User
     public function adminLoginByAuthKey($auth_key)
     {
         return Admins::findOne(['auth_key' => $auth_key]);
+    }
+
+    public function loginByUid($uid)
+    {
+        $class = $this->identityClass;
+        $identity = $class::findIdentity($uid);
+        if ($identity && $this->login($identity)) {
+            return $identity;
+        } else {
+            return null;
+        }
     }
 }

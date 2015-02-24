@@ -14,8 +14,13 @@ $config = [
 			'enableStrictParsing' => true,
 			'showScriptName' => false,
 			'rules' => [
-				'register' => 'register',
-				['class' => 'yii\rest\UrlRule', 'controller' => 'message']
+				'GET register' => 'register',
+				'GET questions' => 'question',
+				'GET messages' => 'message',
+				'POST question' => 'question/add',
+				'POST message' => 'message/add',
+				'DELETE question/<id:\d+>' => 'question/delete',
+				'DELETE message/<id:\d+>' => 'message/delete',
 			],
 		],
 		'request' => [

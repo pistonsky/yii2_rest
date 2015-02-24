@@ -5,25 +5,41 @@ namespace app\controllers;
 use app\models\Users;
 use app\models\LogRequests;
 use app\models\LogSession;
-use app\filters\VkAuth;
+use app\filters\HelloWorldAuth;
 
 class Controller extends \yii\rest\Controller
 {
 	protected $uid;
 
+	public function __construct($id, $module, $config = [])
+    {
+        $this->uid = \Yii::$app->request->getAuthUser();
+        parent::__construct($id, $module, $config);
+    }
+
 	public function behaviors()
 	{
-		return [
-			// 'authenticator' => [
-			// 	'class' => VkAuth::className(),
-			// ],
-			'corsFilter' => [
-				'class' => \yii\filters\Cors::className(),
-			],
-			// 'rateLimiter' => [
-			// 	'class' => \yii\filters\RateLimiter::className(),
-			// ],
-		];
+		if (\Yii::$app->controller->id == 'register')
+			return [
+				'corsFilter' => [
+					'class' => \yii\filters\Cors::className(),
+				],
+				// 'rateLimiter' => [
+				// 	'class' => \yii\filters\RateLimiter::className(),
+				// ],
+			];
+		else
+			return [
+				'authenticator' => [
+					'class' => HelloWorldAuth::className(),
+				],
+				'corsFilter' => [
+					'class' => \yii\filters\Cors::className(),
+				],
+				// 'rateLimiter' => [
+				// 	'class' => \yii\filters\RateLimiter::className(),
+				// ],
+			];
 	}
 
 	private function udate($format, $utimestamp = null)
@@ -92,14 +108,38 @@ class Controller extends \yii\rest\Controller
 	protected function checkInputParameters($names)
 	{
 		$vars = [];
-		foreach ($names as $name)
+		if (\Yii::$app->request->isPost)
 		{
-			if (!isset($_POST[$name]) || ((${$name} = $_POST[$name]) == ''))
+			foreach ($names as $name)
 			{
-				$this->error(InsufficientInputParameters, $name . ' is not set');
+				if (!isset($_POST[$name]) || ((${$name} = $_POST[$name]) == ''))
+				{
+					$this->error(InsufficientInputParameters, $name . ' is not set');
+				}
+				$vars[] = ${$name};
 			}
-			$vars[] = ${$name};
+		} else if (\Yii::$app->request->isGet)
+		{
+			foreach ($names as $name)
+			{
+				if (!isset($_GET[$name]) || ((${$name} = $_GET[$name]) == ''))
+				{
+					$this->error(InsufficientInputParameters, $name . ' is not set');
+				}
+				$vars[] = ${$name};
+			}
+		} else if (\Yii::$app->request->isDelete)
+		{
+			foreach ($names as $name)
+			{
+				if (!isset($_GET[$name]) || ((${$name} = $_GET[$name]) == ''))
+				{
+					$this->error(InsufficientInputParameters, $name . ' is not set');
+				}
+				$vars[] = ${$name};
+			}
 		}
+			
 		return $vars;
 	}
 

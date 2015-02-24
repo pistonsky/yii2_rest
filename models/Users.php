@@ -32,7 +32,7 @@ class Users extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface/*
 
     public function validateAuthKey($authKey)
     {
-        return true;
+        return $authKey == $this->key;
     }
     
     // uncomment next two functions if using mongodb
@@ -86,7 +86,7 @@ class Users extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface/*
      */
     public function loadAllowance($request, $action)
     {
-        $model = static::findOne($request->post('uid'));
+        $model = static::findOne($request->getAuthUser());
         return [$model['allowance'], $model['last_request']];
     }
 
@@ -95,7 +95,7 @@ class Users extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface/*
      */
     public function saveAllowance($request, $action, $allowance, $timestamp)
     {
-        $model = static::findOne($request->post('uid'));
+        $model = static::findOne($request->getAuthUser());
         $model->allowance = $allowance;
         $model->last_request = $timestamp;
         $model->update();
@@ -114,7 +114,7 @@ class Users extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface/*
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        $uid = $_POST['uid'];
+        $uid = \Yii::$app->request->getAuthUser();
         return static::findOne($uid);
     }
 }
