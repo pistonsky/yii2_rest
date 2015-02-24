@@ -11,3 +11,4 @@ define('MAX_QUESTIONS_IN_GET_QUESTIONS', 1);
 define('InsufficientInputParameters', 201);
 define('UserNotFound',400);
 define('TooManyRequests',427);
+define('SaveFailed',430);

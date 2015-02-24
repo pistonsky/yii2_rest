@@ -34,7 +34,7 @@ class MessageController extends Controller
 
     public function actionAdd()
     {
-    	list($text,$question_id) = $this->checkInputParameters(['text','question_id']); 
+    	list($text,$question_id,$time) = $this->checkInputParameters(['text','question_id','time']); 
 
     	$user = $this->getUser();
 
@@ -44,15 +44,18 @@ class MessageController extends Controller
     	$model->text = $text;
     	$model->question_id = $question_id;
     	$model->to = \Yii::$app->request->post('to', null);
-    	$model->time = time();
-    	$result = $model->save();
-
-    	$this->renderJSON([
-    		'response' => [
-    			'data' => [
-    				'result' => $result
-    			]
-    		]
-    	]);
+    	$model->time = $time;
+    	if ($model->save())
+        {
+            $this->renderJSON([
+                'response' => [
+                    'data' => [
+                        'id' => $model->id
+                    ]
+                ]
+            ]);
+        } else {
+            $this->error(SaveFailed, "message save failure");
+        }
     }
 }
