@@ -8,9 +8,11 @@ class QuestionController extends Controller
 {
     public function actionIndex()
     {
+        list($lang) = $this->checkInputParameters(['lang']);
+
     	$user = $this->getUser();
 
-    	$questions = Question::find()->where('user_id!='.$user->id)->orderBy('id DESC')->limit(MAX_LAST_QUESTIONS_TO_SHUFFLE_FROM_IN_GET_QUESTIONS)->asArray()->all();
+    	$questions = Question::find()->where('user_id!='.$user->id)->andWhere(['lang'=>$lang])->orderBy('id DESC')->limit(MAX_LAST_QUESTIONS_TO_SHUFFLE_FROM_IN_GET_QUESTIONS)->asArray()->all();
 
     	shuffle($questions);
     	$questions = array_slice($questions, 0, MAX_QUESTIONS_IN_GET_QUESTIONS);
@@ -26,7 +28,7 @@ class QuestionController extends Controller
 
     public function actionAdd()
     {
-    	list($text,$limit) = $this->checkInputParameters(['text','limit']);
+    	list($text,$limit,$lang) = $this->checkInputParameters(['text','limit','lang']);
 
     	$user = $this->getUser();
 
@@ -34,6 +36,7 @@ class QuestionController extends Controller
     	$question->user_id = $user->id;
     	$question->text = $text;
     	$question->limit = $limit;
+        $question->lang = $lang;
     	$question->time = time();
 
     	$result = $question->save();
@@ -41,7 +44,7 @@ class QuestionController extends Controller
     	$this->renderJSON([
     		'response' => [
     			'data' => [
-    				'result' => $result
+    				'id' => $question->id
     			]
     		]
     	]);
