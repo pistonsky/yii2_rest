@@ -14,19 +14,47 @@ class MessageController extends Controller
     	$user = $this->getUser();
 
     	// first - find all my questions
-    		$my_questions_model = Question::find()->where(['user_id'=>$user->id])->all();
-    		$questions = [];
-    		foreach ($my_questions_model as $q)
-    			$questions[] = $q->id;
+    		$questions = Question::find()->where(['user_id'=>$user->id])->select('id')->column();
+
+        // second - find all questions that I have answered
+            $answered_questions = Message::find()->where(['user_id'=>$user->id])->distinct()->select('question_id')->column();
 
     	// second - find all messages that have greater id than version, and that belong to my questions or written to me
-    		$messages = Message::find()->where(['question_id'=>$questions])->andWhere('id>'.$version)->orWhere(['to'=>$user->id])->andWhere('id>'.$version)->asArray()->all();
+    		$messages = Message::find()->where(['question_id'=>$questions,'type'=>Message::TYPE_MESSAGE])->andWhere('id>'.$version)->orWhere(['to'=>$user->id,'type'=>Message::TYPE_MESSAGE])->andWhere('id>'.$version)->asArray()->all();
 
+        // third - find recently deleted chats where I participated
+            $deleted_questions = [];
+            if ($deleted = Message::find()
+                ->where(['type'=>Message::TYPE_DELETE,'question_id'=>$questions])
+                ->andWhere('id>'.$version)
+
+                ->orWhere(['to'=>$user->id,'type'=>Message::TYPE_DELETE])
+                ->andWhere('id>'.$version)
+
+                ->orWhere(['type'=>Message::TYPE_DELETE,'question_id'=>$answered_questions,'user_id'=>0])
+                ->andWhere('id>'.$version)->all())
+            {
+                foreach ($deleted as $message) {
+                    if ($message->user_id != $user->id) // don't tell me which chats have I deleted on my own - I know that
+                    {
+                        $deleted_question = [
+                            'id' => $message->question_id,
+                            'time' => $message->time
+                        ];
+                        if (($message->user_id != 0) && ($message->user_id != $user->id))
+                            $deleted_question['user_id'] = $message->user_id;
+                        if ($message->text != '')
+                            $deleted_question['text'] = $message->text;
+                        $deleted_questions[] = $deleted_question;
+                    }
+                }
+            }
 
     	$this->renderJSON([
     		'response' => [
     			'data' => [
-    				'messages' => $messages
+    				'messages' => $messages,
+                    'deleted_questions' => $deleted_questions
     			]
     		]
     	]);

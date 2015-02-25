@@ -9,6 +9,7 @@ define('MAX_QUESTIONS_IN_GET_QUESTIONS', 1);
 // коды ошибок
 
 define('InsufficientInputParameters', 201);
+define('InvalidParameter', 202);
 define('UserNotFound',400);
 define('TooManyRequests',427);
 define('SaveFailed',430);

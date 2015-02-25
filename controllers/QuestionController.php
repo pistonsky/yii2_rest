@@ -53,8 +53,57 @@ class QuestionController extends Controller
     	]);
     }
 
-    public function actionDelete()
+    public function actionDelete($id)
     {
-        $this->error(UnderDevelopment,'this method is not yet developed');
+        $user = $this->getUser();
+        if ($question = Question::findOne($id))
+        {
+            // find out if I am the author
+            if ($user->id == $question->user_id)
+            {
+                $user_id = \Yii::$app->request->post('user_id', null);
+                if ($user_id === null)
+                {
+                    // deleting the whole question
+                    $message = new Message();
+                    $message->user_id = 0;
+                    $message->text = \Yii::$app->request->post('text','');
+                    $message->question_id = $id;
+                    $message->type = Message::TYPE_DELETE;
+                    $message->time = time();
+
+                    $result = $message->save();
+                } else {
+                    // deleting chat with user_id
+                    $message = new Message();
+                    $message->user_id = $user_id;
+                    $message->text = \Yii::$app->request->post('text','');
+                    $message->question_id = $id;
+                    $message->type = Message::TYPE_DELETE;
+                    $message->time = time();
+
+                    $result = $message->save();
+                }
+            } else {
+                // I am not the author - I just want to close chat
+                $message = new Message();
+                $message->user_id = $user->id;
+                $message->text = \Yii::$app->request->post('text','');
+                $message->question_id = $id;
+                $message->type = Message::TYPE_DELETE;
+                $message->time = time();
+
+                $result = $message->save();
+            }
+            $this->renderJSON([
+                'response' => [
+                    'data' => [
+                        'result' => $result
+                    ]
+                ]
+            ]);
+        } else {
+            $this->error(InvalidParameter,"question #$id doesn't exist");
+        }
     }
 }
