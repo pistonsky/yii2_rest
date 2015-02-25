@@ -66,26 +66,36 @@ class MessageController extends Controller
 
     	$user = $this->getUser();
 
-    	$model = new Message();
+        // check if chat was closed before - if we have Message::TYPE_DELETE message for this question_id and user_id
 
-    	$model->user_id = $user->id;
-    	$model->text = $text;
-    	$model->question_id = $question_id;
-    	$model->to = \Yii::$app->request->post('to', null);
-    	$model->time = $time;
-    	if ($model->save())
+        if (!$deleted_message_model = Message::find()->where(['type'=>Message::TYPE_DELETE,'question_id'=>$question_id,'user_id'=>[0,$user->id,\Yii::$app->request->post('to', 0)]])->one())
         {
-            $this->renderJSON([
-                'response' => [
-                    'data' => [
-                        'id' => $model->id
+        	$model = new Message();
+
+        	$model->user_id = $user->id;
+        	$model->text = $text;
+        	$model->question_id = $question_id;
+        	$model->to = \Yii::$app->request->post('to', null);
+        	$model->time = $time;
+        	if ($model->save())
+            {
+                $this->renderJSON([
+                    'response' => [
+                        'data' => [
+                            'id' => $model->id
+                        ]
                     ]
-                ]
-            ]);
-        } else {
-            $this->error(SaveFailed, "message save failure");
-        }
-    }
+                ]);
+            } else {
+                $this->error(SaveFailed, "message save failure");
+            }
+         } else {
+            if ($deleted_message_model->user_id == 0)
+                $this->error(ChatClosed, "this question and all conversations for it were deleted by question author");
+            else
+                $this->error(ChatClosed, "this conversation was deleted");
+         }
+   }
 
     public function actionDelete()
     {

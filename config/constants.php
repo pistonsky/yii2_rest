@@ -13,4 +13,5 @@ define('InvalidParameter', 202);
 define('UserNotFound',400);
 define('TooManyRequests',427);
 define('SaveFailed',430);
+define('ChatClosed',444);
 define('UnderDevelopment',666);
