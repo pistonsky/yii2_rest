@@ -11,18 +11,13 @@ class RegisterController extends Controller
     	$model = new Users();
 
     	// TODO: generating encryption key
-    	$model->key = md5(microtime(true));
+    	$model->key = md5(microtime(true) . SALT);
 
     	$model->save();
 
     	$this->renderJSON([
-    		'response' => [
-    			'data' => [
-    				'id' => $model->id,
-    				'key' => $model->key
-    			],
-    			'time' => time()
-    		]
+			'id' => $model->id,
+			'key' => $model->key
     	]);
     }
 }

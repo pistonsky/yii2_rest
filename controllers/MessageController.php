@@ -51,12 +51,8 @@ class MessageController extends Controller
             }
 
     	$this->renderJSON([
-    		'response' => [
-    			'data' => [
-    				'messages' => $messages,
-                    'deleted_questions' => $deleted_questions
-    			]
-    		]
+				'messages' => $messages,
+                'deleted_questions' => $deleted_questions
     	]);
     }
 
@@ -68,23 +64,19 @@ class MessageController extends Controller
 
         // check if chat was closed before - if we have Message::TYPE_DELETE message for this question_id and user_id
 
-        if (!$deleted_message_model = Message::find()->where(['type'=>Message::TYPE_DELETE,'question_id'=>$question_id,'user_id'=>[0,$user->id,\Yii::$app->request->post('to', 0)]])->one())
+        if (!$deleted_message_model = Message::find()->where(['type'=>Message::TYPE_DELETE,'question_id'=>$question_id,'user_id'=>[0,$user->id,$this->post('to', 0)]])->one())
         {
         	$model = new Message();
 
         	$model->user_id = $user->id;
         	$model->text = $text;
         	$model->question_id = $question_id;
-        	$model->to = \Yii::$app->request->post('to', null);
+        	$model->to = $this->post('to', null);
         	$model->time = $time;
         	if ($model->save())
             {
                 $this->renderJSON([
-                    'response' => [
-                        'data' => [
-                            'id' => $model->id
-                        ]
-                    ]
+                    'id' => $model->id
                 ]);
             } else {
                 $this->error(SaveFailed, "message save failure");

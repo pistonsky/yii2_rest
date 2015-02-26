@@ -7,9 +7,28 @@ use app\models\LogRequests;
 use app\models\LogSession;
 use app\filters\HelloWorldAuth;
 
+use app\components\Security;
+
 class Controller extends \yii\rest\Controller
 {
 	protected $uid;
+
+	private $encrypted;
+
+	protected $input_parameters;
+
+	public function __get($key)
+	{
+		return $this->input_parameters[$key];
+	}
+
+	public function post($key, $default=NULL)
+	{
+		if (isset($this->$key))
+			return $this->$key;
+		else
+			return $default;
+	}
 
 	public function __construct($id, $module, $config = [])
     {
@@ -61,7 +80,12 @@ class Controller extends \yii\rest\Controller
 	{
 		header('Content-type: application/json');
 
-		echo json_encode(array_merge($data,['time'=>\Yii::getLogger()->getElapsedTime()*1000]));
+		$data['time'] = time();
+
+		echo json_encode([
+			'data' => $this->encrypted?Security::encrypt(json_encode($data),\Yii::$app->user->identity->key):json_encode($data),
+			'time'=>\Yii::getLogger()->getElapsedTime()*1000
+		]);
 
 		// logging
 			\Yii::info("\n" . json_encode($data, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE), 'api');
@@ -81,6 +105,21 @@ class Controller extends \yii\rest\Controller
 	public function beforeAction($action)
 	{
 		parent::beforeAction($action);
+
+        // decoding input parameters
+	        if (isset($_POST['data']))
+	        {
+	        	if ($data = json_decode($_POST['data']))
+	        	{
+	        		// unencrypted
+	        		$this->encrypted = false;
+	        		$this->input_parameters = $data;
+	        	} else {
+	        		$this->encrypted = true;
+	        		$user = \Yii::$app->user->identity;
+	        		$this->input_parameters = Security::decrypt($data, $user->key);
+	        	}
+	        }
 		
 		// start profiling
 			\Yii::beginProfile('apiTotalTimeBenchmark');
@@ -108,38 +147,16 @@ class Controller extends \yii\rest\Controller
 	protected function checkInputParameters($names)
 	{
 		$vars = [];
-		if (\Yii::$app->request->isPost)
+
+		foreach ($names as $name)
 		{
-			foreach ($names as $name)
+			if (!isset($this->$name) || ((${$name} = $this->$name) == ''))
 			{
-				if (!isset($_POST[$name]) || ((${$name} = $_POST[$name]) == ''))
-				{
-					$this->error(InsufficientInputParameters, $name . ' is not set');
-				}
-				$vars[] = ${$name};
+				$this->error(InsufficientInputParameters, $name . ' is not set');
 			}
-		} else if (\Yii::$app->request->isGet)
-		{
-			foreach ($names as $name)
-			{
-				if (!isset($_GET[$name]) || ((${$name} = $_GET[$name]) == ''))
-				{
-					$this->error(InsufficientInputParameters, $name . ' is not set');
-				}
-				$vars[] = ${$name};
-			}
-		} else if (\Yii::$app->request->isDelete)
-		{
-			foreach ($names as $name)
-			{
-				if (!isset($_GET[$name]) || ((${$name} = $_GET[$name]) == ''))
-				{
-					$this->error(InsufficientInputParameters, $name . ' is not set');
-				}
-				$vars[] = ${$name};
-			}
+			$vars[] = ${$name};
 		}
-			
+
 		return $vars;
 	}
 

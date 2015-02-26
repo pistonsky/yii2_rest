@@ -21,11 +21,7 @@ class QuestionController extends Controller
     	$questions = array_slice($questions, 0, MAX_QUESTIONS_IN_GET_QUESTIONS);
 
     	$this->renderJSON([
-    		'response' => [
-    			'data' => [
-    				'questions' => $questions
-    			]
-    		]
+    		'questions' => $questions
     	]);
     }
 
@@ -45,11 +41,7 @@ class QuestionController extends Controller
     	$result = $question->save();
 
     	$this->renderJSON([
-    		'response' => [
-    			'data' => [
-    				'id' => $question->id
-    			]
-    		]
+    		'id' => $question->id
     	]);
     }
 
@@ -62,13 +54,13 @@ class QuestionController extends Controller
             // find out if I am the author
             if ($user->id == $question->user_id)
             {
-                $user_id = \Yii::$app->request->post('user_id', null);
+                $user_id = $this->post('user_id', null);
                 if ($user_id === null)
                 {
                     // deleting the whole question
                     $message = new Message();
                     $message->user_id = 0;
-                    $message->text = \Yii::$app->request->post('text','');
+                    $message->text = $this->post('text','');
                     $message->question_id = $id;
                     $message->type = Message::TYPE_DELETE;
                     $message->time = time();
@@ -78,7 +70,7 @@ class QuestionController extends Controller
                     // deleting chat with user_id
                     $message = new Message();
                     $message->user_id = $user_id;
-                    $message->text = \Yii::$app->request->post('text','');
+                    $message->text = $this->post('text','');
                     $message->question_id = $id;
                     $message->type = Message::TYPE_DELETE;
                     $message->time = time();
@@ -89,7 +81,7 @@ class QuestionController extends Controller
                 // I am not the author - I just want to close chat
                 $message = new Message();
                 $message->user_id = $user->id;
-                $message->text = \Yii::$app->request->post('text','');
+                $message->text = $this->post('text','');
                 $message->question_id = $id;
                 $message->type = Message::TYPE_DELETE;
                 $message->time = time();
@@ -97,11 +89,7 @@ class QuestionController extends Controller
                 $result = $message->save();
             }
             $this->renderJSON([
-                'response' => [
-                    'data' => [
-                        'result' => $result
-                    ]
-                ]
+                'result' => $result
             ]);
         } else {
             $this->error(InvalidParameter,"question #$id doesn't exist");
