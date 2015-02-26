@@ -113,11 +113,11 @@ class Controller extends \yii\rest\Controller
 	        	{
 	        		// unencrypted
 	        		$this->encrypted = false;
-	        		$this->input_parameters = json_decode($data);
+	        		$this->input_parameters = $data;
 	        	} else {
 	        		$this->encrypted = true;
 	        		$user = \Yii::$app->user->identity;
-	        		$this->input_parameters = json_decode(Security::decrypt($data, $user->key));
+	        		$this->input_parameters = json_decode(Security::decrypt($_POST['data'], $user->key));
 	        	}
 	        } else {
 	        	$this->encrypted = false;
