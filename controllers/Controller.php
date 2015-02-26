@@ -171,11 +171,13 @@ class Controller extends \yii\rest\Controller
 
 	protected function error($code, $msg)
 	{
-		$this->renderJSON([
-				'error' => [
+		$data = [
 					'code' => $code,
 					'msg' => $msg
-				]
-			]);
+				];
+		echo json_encode([
+			'error' => $this->encrypted?Security::encrypt(json_encode($data),\Yii::$app->user->identity->key):json_encode($data),
+			'time'=>\Yii::getLogger()->getElapsedTime()*1000
+		]);
 	}
 }
