@@ -19,7 +19,7 @@ class Controller extends \yii\rest\Controller
 
 	public function __get($key)
 	{
-		return $this->input_parameters[$key];
+		return $this->input_parameters->$key;
 	}
 
 	public function post($key, $default=NULL)
@@ -109,15 +109,15 @@ class Controller extends \yii\rest\Controller
         // decoding input parameters
 	        if (isset($_POST['data']))
 	        {
-	        	if ($data = json_decode($_POST['data']))
+	        	if (($data = json_decode($_POST['data'])) === NULL)
 	        	{
-	        		// unencrypted
-	        		$this->encrypted = false;
-	        		$this->input_parameters = $data;
-	        	} else {
 	        		$this->encrypted = true;
 	        		$user = \Yii::$app->user->identity;
 	        		$this->input_parameters = json_decode(Security::decrypt($_POST['data'], $user->key));
+	        	} else {
+	        		// unencrypted
+	        		$this->encrypted = false;
+	        		$this->input_parameters = $data;
 	        	}
 	        } else {
 	        	$this->encrypted = false;
@@ -152,11 +152,11 @@ class Controller extends \yii\rest\Controller
 
 		foreach ($names as $name)
 		{
-			if (!isset($this->$name) || ((${$name} = $this->$name) == ''))
+			if (!isset($this->input_parameters->$name) || ($this->input_parameters->$name == ''))
 			{
 				$this->error(InsufficientInputParameters, $name . ' is not set');
 			}
-			$vars[] = ${$name};
+			$vars[] = $this->input_parameters->$name;
 		}
 
 		return $vars;
@@ -173,6 +173,7 @@ class Controller extends \yii\rest\Controller
 
 	protected function error($code, $msg)
 	{
+		header('Content-type: application/json');
 		$data = [
 					'code' => $code,
 					'msg' => $msg
@@ -181,5 +182,7 @@ class Controller extends \yii\rest\Controller
 			'error' => $this->encrypted?Security::encrypt(json_encode($data),\Yii::$app->user->identity->key):json_encode($data),
 			'time'=>\Yii::getLogger()->getElapsedTime()*1000
 		]);
+
+		exit;
 	}
 }
