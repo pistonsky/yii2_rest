@@ -2,3 +2,4 @@ web/assets/*
 !web/assets/.gitignore
 runtime/*
 !runtime/.gitignore
+dump.rdb
