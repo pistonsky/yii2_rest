@@ -17,10 +17,14 @@ $config = [
 				'GET register' => 'register',
 				'GET questions' => 'question',
 				'GET messages' => 'message',
+				'POST questions' => 'question',
+				'POST messages' => 'message',
 				'POST question' => 'question/add',
 				'POST message' => 'message/add',
 				'DELETE question' => 'question/delete',
 				'DELETE message' => 'message/delete',
+				'POST encrypt' => 'dev/encrypt',
+				'POST decrypt' => 'dev/decrypt'
 			],
 		],
 		'request' => [

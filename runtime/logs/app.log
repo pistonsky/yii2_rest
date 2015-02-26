@@ -971,3 +971,152 @@ Additional Information:
     ]
     'argc' => 2
 ]
+2015-02-26 17:32:36 [::1][1][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\controllers\Security' not found' in /Applications/MAMP/htdocs/hello_world/controllers/DevController.php:9
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-02-26 17:32:36 [::1][1][-][info][application] $_POST = [
+    'data' => '{\"version\":0}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '148'
+    'HTTP_POSTMAN_TOKEN' => 'e473bff1-9e67-6f10-4474-4066a2a92c55'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryHbrgDoNM6kgHeB09'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '57675'
+    'REDIRECT_URL' => '/hello_world/web/encrypt'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/encrypt'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'PHP_AUTH_USER' => '1'
+    'PHP_AUTH_PW' => '13237341d63db047d561d822c79e760b'
+    'REQUEST_TIME_FLOAT' => 1424968356.53
+    'REQUEST_TIME' => 1424968356
+    'argv' => []
+    'argc' => 0
+]
+2015-02-26 17:32:57 [::1][1][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\models\Security' not found' in /Applications/MAMP/htdocs/hello_world/controllers/DevController.php:11
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-02-26 17:32:57 [::1][1][-][info][application] $_POST = [
+    'data' => '{\"version\":0}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '148'
+    'HTTP_POSTMAN_TOKEN' => '5424ffcd-0f3b-f3ba-9a1c-2315fb6c9a0e'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary1uthJs2OURFAhNQt'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '57676'
+    'REDIRECT_URL' => '/hello_world/web/encrypt'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/encrypt'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'PHP_AUTH_USER' => '1'
+    'PHP_AUTH_PW' => '13237341d63db047d561d822c79e760b'
+    'REQUEST_TIME_FLOAT' => 1424968377.7
+    'REQUEST_TIME' => 1424968377
+    'argv' => []
+    'argc' => 0
+]
+2015-02-26 17:38:54 [::1][1][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: version' in /Applications/MAMP/htdocs/hello_world/controllers/Controller.php:159
+Stack trace:
+#0 /Applications/MAMP/htdocs/hello_world/controllers/Controller.php(159): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/Applications/M...', 159, Array)
+#1 /Applications/MAMP/htdocs/hello_world/controllers/MessageController.php(12): app\controllers\Controller->checkInputParameters(Array)
+#2 [internal function]: app\controllers\MessageController->actionIndex()
+#3 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('', Array)
+#6 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module->runAction('message', Array)
+#7 /Applications/MAMP/htdocs/hello_world/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Applications/MAMP/htdocs/hello_world/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2015-02-26 17:38:54 [::1][1][-][info][application] $_POST = [
+    'data' => 'y1R4Ogy/T3IMPh8P0iDRoQ=='
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '159'
+    'HTTP_POSTMAN_TOKEN' => 'f445f696-3ba7-8f99-9a27-0e439d3381d6'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryDoK7dyQPCDtwoAk8'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,fr;q=0.6,ru;q=0.4,de;q=0.2'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.2 mod_ssl/2.2.29 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.20.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/hello_world/web/index.php'
+    'REMOTE_PORT' => '57704'
+    'REDIRECT_URL' => '/hello_world/web/messages'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hello_world/web/messages'
+    'SCRIPT_NAME' => '/hello_world/web/index.php'
+    'PHP_SELF' => '/hello_world/web/index.php'
+    'PHP_AUTH_USER' => '1'
+    'PHP_AUTH_PW' => ''
+    'REQUEST_TIME_FLOAT' => 1424968734.41
+    'REQUEST_TIME' => 1424968734
+    'argv' => []
+    'argc' => 0
+]
