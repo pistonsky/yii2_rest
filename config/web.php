@@ -19,8 +19,8 @@ $config = [
 				'GET messages' => 'message',
 				'POST question' => 'question/add',
 				'POST message' => 'message/add',
-				'DELETE question/<id:\d+>' => 'question/delete',
-				'DELETE message/<id:\d+>' => 'message/delete',
+				'DELETE question' => 'question/delete',
+				'DELETE message' => 'message/delete',
 			],
 		],
 		'request' => [

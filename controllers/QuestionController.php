@@ -53,8 +53,9 @@ class QuestionController extends Controller
     	]);
     }
 
-    public function actionDelete($id)
+    public function actionDelete()
     {
+        list($id) = $this->checkInputParameters(['id']);
         $user = $this->getUser();
         if ($question = Question::findOne($id))
         {
