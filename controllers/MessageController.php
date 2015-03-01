@@ -38,7 +38,8 @@ class MessageController extends Controller
                     if ($message->user_id != $user->id) // don't tell me which chats have I deleted on my own - I know that
                     {
                         $deleted_question = [
-                            'id' => $message->question_id,
+                            'id' => $message->id,                   // now with ID
+                            'question_id' => $message->question_id,
                             'time' => $message->time
                         ];
                         if (($message->user_id != 0) && ($message->user_id != $user->id))
