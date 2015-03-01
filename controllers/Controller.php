@@ -24,8 +24,8 @@ class Controller extends \yii\rest\Controller
 
 	public function post($key, $default=NULL)
 	{
-		if (isset($this->input_parameters[$key]))
-			return $this->input_parameters[$key];
+		if (isset($this->input_parameters->$key))
+			return $this->input_parameters->$key;
 		else
 			return $default;
 	}
