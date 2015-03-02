@@ -73,7 +73,7 @@ class MessageController extends Controller
         	$model->text = $text;
         	$model->question_id = $question_id;
         	$model->to = $this->post('to', null);
-        	$model->time = $time;
+        	$model->time = time();
         	if ($model->save())
             {
                 $this->renderJSON([
