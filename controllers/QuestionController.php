@@ -69,7 +69,8 @@ class QuestionController extends Controller
                 } else {
                     // deleting chat with user_id
                     $message = new Message();
-                    $message->user_id = $user_id;
+                    $message->user_id = $user->id;
+                    $message->to = $user_id;
                     $message->text = $this->post('text','');
                     $message->question_id = $id;
                     $message->type = Message::TYPE_DELETE;
